@@ -52,7 +52,10 @@ public static void printPersonsWithinAgeRange(
     }
 }
 ```
-What if you want to print members of a specified sex, or a combination of a specified gender and age range? What if you decide to change the Person class and add other attributes such as relationship status or geographical location? Although this method is more generic than printPersonsOlderThan, trying to create a separate method for each possible search query can still lead to brittle code. You can instead separate the code that specifies the criteria for which you want to search in a different class.
+What if you want to print members of a specified sex, or a combination of a specified gender and age range? 
+What if you decide to change the Person class and add other attributes such as relationship status or geographical location? 
+Although this method is more generic than printPersonsOlderThan, trying to create a separate method for each possible search 
+query can still lead to brittle code. You can instead separate the code that specifies the criteria for which you want to search in a different class.
 
 ### Approach 3: Specify Search Criteria Code in a Local Class
 
@@ -69,7 +72,9 @@ public static void printPersons(
 }
 ```
 
-This method checks each Person instance contained in the List parameter roster whether it satisfies the search criteria specified in the CheckPerson parameter tester by invoking the method tester.test. If the method tester.test returns a true value, then the method printPersons is invoked on the Person instance.
+This method checks each Person instance contained in the List parameter roster whether it satisfies the search criteria specified in the CheckPerson
+parameter tester by invoking the method tester.test. If the method tester.test returns a true value, then the method printPersons is invoked on the 
+Person instance.
 
 To specify the search criteria, you implement the CheckPerson interface:
 
