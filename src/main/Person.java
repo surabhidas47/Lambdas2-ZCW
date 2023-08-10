@@ -36,6 +36,10 @@ public class Person {
     }
 
     public int getAge() {
+
+        if (birthday == null) {
+
+        }
         LocalDate current = LocalDate.now();
         //The Period class provides a way to represent a time span between two dates (years, months, and days)
         Period period = Period.between(birthday, current);

@@ -28,6 +28,7 @@ public class PersonClassTest {
         p.setGender(expected);
 
         Person.Sex actual = p.getGender();
+        Assert.assertEquals(expected,actual);
 
 
 
