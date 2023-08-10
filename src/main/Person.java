@@ -38,6 +38,7 @@ public class Person {
     public int getAge() {
 
         if (birthday == null) {
+            return -1;
 
         }
         LocalDate current = LocalDate.now();
@@ -63,7 +64,7 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
-                ", birthday=" + birthday +
+                ", age=" + getAge() +
                 ", gender=" + gender +
                 ", emailAddress='" + emailAddress + '\'' +
                 '}';
@@ -71,17 +72,19 @@ public class Person {
 
 
     //associted with instance
-    public void printPerson(){
+    public void printyBinty(){
         System.out.println(this.toString());
 
     }
 
 
     //associated with the class
-    public static void printPerson(List<Person> roster, CheckPerson tester) {
+    //roster is a scoped var, it only exists w/in scope of this method
+    //passing in a concrete CheckPerson
+    public static void printPerson(List<Person> roster, CheckPerson bloop) {
             for (Person p : roster) {
-                if (tester.test(p)) {
-                    p.printPerson();
+                if (bloop.test(p)) {
+                    p.printyBinty();
                 }
             }
 

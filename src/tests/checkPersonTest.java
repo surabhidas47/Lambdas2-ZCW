@@ -1,5 +1,6 @@
 package tests;
 
+import main.CheckPersonConcrete;
 import main.Person;
 import org.junit.Test;
 
